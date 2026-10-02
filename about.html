@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title data-i18n="meta.title.about">HCC-CPDA</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/site.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body data-page="about">
+<a class="skip-link" href="#content" data-i18n="nav.skip_content"></a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <p class="wordmark"><a href="index.html" data-i18n="brand.name"></a></p>
+      <p class="tagline" data-i18n="brand.subtitle"></p>
+    </div>
+    <nav class="header-nav" data-i18n-attr="aria-label:nav.label">
+      <div class="lang-toggle" role="group" data-i18n-attr="aria-label:lang.label">
+        <button type="button" data-lang="en" aria-pressed="true" lang="en" data-i18n="lang.en"></button>
+        <button type="button" data-lang="zh-TW" aria-pressed="false" lang="zh-TW" data-i18n="lang.zh"></button>
+      </div>
+      <a class="nav-link" href="index.html" data-i18n="nav.calc"></a>
+    </nav>
+  </div>
+  <div class="banner" role="note"><p class="wrap" data-i18n="banner.text"></p></div>
+</header>
+
+<noscript><p class="wrap noscript">JavaScript is required to show this page's text. 此頁文字需要 JavaScript 才能顯示。</p></noscript>
+
+<main id="content" class="wrap about" tabindex="-1">
+  <h1 data-i18n="about.title"></h1>
+  <p class="lead" data-i18n="about.lead"></p>
+  <p class="msg msg-warn provisional" data-i18n="about.provisional"></p>
+
+  <nav class="toc" aria-labelledby="toc-title">
+    <h2 id="toc-title" data-i18n="about.toc"></h2>
+    <ol>
+      <li><a href="#what" data-i18n="about.what.h"></a></li>
+      <li><a href="#cohort" data-i18n="about.cohort.h"></a></li>
+      <li><a href="#inputs" data-i18n="about.inputs.h"></a></li>
+      <li><a href="#model" data-i18n="about.model.h"></a></li>
+      <li><a href="#performance" data-i18n="about.perf.h"></a></li>
+      <li><a href="#ranking" data-i18n="about.rank.h"></a></li>
+      <li><a href="#exclusion" data-i18n="about.excl.h"></a></li>
+      <li><a href="#not-considered" data-i18n="about.notc.h"></a></li>
+      <li><a href="#limitations" data-i18n="about.limits.h"></a></li>
+      <li><a href="#calculator-model" data-i18n="about.calc.h"></a></li>
+      <li><a href="#model-card-section" data-i18n="about.card.h"></a></li>
+      <li><a href="#privacy" data-i18n="about.privacy.h"></a></li>
+      <li><a href="#status" data-i18n="about.status.h"></a></li>
+      <li><a href="#contact" data-i18n="about.contact.h"></a></li>
+    </ol>
+  </nav>
+
+  <section id="what" class="doc-sec" aria-labelledby="what-h">
+    <h2 id="what-h" data-i18n="about.what.h"></h2>
+    <p data-i18n="about.what.p1"></p>
+    <p data-i18n="about.what.p2"></p>
+  </section>
+
+  <section id="cohort" class="doc-sec" aria-labelledby="cohort-h">
+    <h2 id="cohort-h" data-i18n="about.cohort.h"></h2>
+    <p data-i18n="about.cohort.p1"></p>
+    <p data-i18n="about.cohort.p2"></p>
+    <p class="quote" data-i18n="about.cohort.p3"></p>
+  </section>
+
+  <section id="inputs" class="doc-sec" aria-labelledby="inputs-h">
+    <h2 id="inputs-h" data-i18n="about.inputs.h"></h2>
+    <p data-i18n="about.inputs.p1"></p>
+    <ol class="cols">
+      <li data-i18n="field.sex.label"></li>
+      <li data-i18n="field.age.label"></li>
+      <li data-i18n="field.BMI.label"></li>
+      <li data-i18n="field.HBV.label"></li>
+      <li data-i18n="field.HCV.label"></li>
+      <li data-i18n="field.maximal_tumor_size.label"></li>
+      <li data-i18n="field.tumor_number.label"></li>
+      <li data-i18n="field.lymphonodules.label"></li>
+      <li data-i18n="field.metastatsis.label"></li>
+      <li data-i18n="field.cirrhosis.label"></li>
+      <li data-i18n="field.childPugh_class.label"></li>
+      <li data-i18n="field.total_bilirubin.label"></li>
+      <li data-i18n="field.INR.label"></li>
+      <li data-i18n="field.AFP.label"></li>
+      <li data-i18n="field.creatine.label"></li>
+    </ol>
+    <p data-i18n="about.inputs.p2"></p>
+    <p data-i18n="about.inputs.p3"></p>
+    <p data-i18n="about.inputs.p4"></p>
+  </section>
+
+  <section id="model" class="doc-sec" aria-labelledby="model-h">
+    <h2 id="model-h" data-i18n="about.model.h"></h2>
+    <p data-i18n="about.model.p1"></p>
+    <p data-i18n="about.model.p2"></p>
+    <p data-i18n="about.model.p3"></p>
+    <p data-i18n="about.model.p4"></p>
+    <div class="table-wrap">
+      <table class="doc-table stack">
+        <caption data-i18n="about.model.table_caption"></caption>
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="about.model.col.stage"></th>
+            <th scope="col" class="num" data-i18n="about.model.col.horizon"></th>
+            <th scope="col" data-i18n="about.model.col.menu"></th>
+            <th scope="col" data-i18n="about.model.col.reference"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">0</th><td class="num">84</td><td>LT, SR, RFA/PEIT, TACE, BSC</td><td class="seq">LT &gt; SR &gt; RFA &gt; TACE &gt; BSC</td></tr>
+          <tr><th scope="row">A</th><td class="num">84</td><td>LT, SR, RFA/PEIT, TACE, BSC</td><td class="seq">LT &gt; SR &gt; RFA &gt; TACE &gt; BSC</td></tr>
+          <tr><th scope="row">B</th><td class="num">36</td><td>LT, SR, RFA/PEIT, TACE, BSC</td><td class="seq">LT &gt; SR &gt; RFA &gt; TACE &gt; BSC</td></tr>
+          <tr><th scope="row">C</th><td class="num">24</td><td>SR, RFA/PEIT, TACE, TT, HAIC, RT, BSC</td><td class="seq">SR &gt; RFA &gt; TACE &gt; HAIC &gt; RT &gt; TT &gt; BSC</td></tr>
+          <tr><th scope="row">D</th><td class="num">12</td><td>RFA/PEIT, TACE, BSC</td><td class="seq">RFA &gt; TACE &gt; BSC</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-i18n="about.model.p5"></p>
+  </section>
+
+  <section id="performance" class="doc-sec" aria-labelledby="performance-h">
+    <h2 id="performance-h" data-i18n="about.perf.h"></h2>
+    <p data-i18n="about.perf.p1"></p>
+    <div class="table-wrap">
+      <table class="doc-table stack">
+        <caption data-i18n="about.perf.t2a_caption"></caption>
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="about.perf.col.model"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.overall"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.same"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.ibs"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.mae"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.cal"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">XGBoost-AFT</th><td class="num">0.8350 <span class="ci">(0.8311–0.8391)</span></td><td class="num">0.7497 <span class="ci">(0.7431–0.7557)</span></td><td class="num">0.1451</td><td class="num">12.47</td><td class="num">0.0406</td></tr>
+          <tr><th scope="row" data-i18n="about.perf.additive"></th><td class="num">0.8238 <span class="ci">(0.8197–0.8280)</span></td><td class="num">0.7279 <span class="ci">(0.7208–0.7345)</span></td><td class="num">0.1529</td><td class="num">12.98</td><td class="num">0.0608</td></tr>
+          <tr><th scope="row" data-i18n="about.perf.interaction"></th><td class="num">0.8272 <span class="ci">(0.8231–0.8313)</span></td><td class="num">0.7345 <span class="ci">(0.7274–0.7409)</span></td><td class="num">0.1512</td><td class="num">12.96</td><td class="num">0.0586</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine" data-i18n="about.perf.t2a_note"></p>
+    <div class="table-wrap">
+      <table class="doc-table stack">
+        <caption data-i18n="about.perf.t2b_caption"></caption>
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="about.perf.col.site"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.overall"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.same"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.ibs_km"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.mae_km"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-i18n="site.1"></th><td class="num">0.8429 <span class="ci">(0.8362–0.8497)</span></td><td class="num">0.7777 <span class="ci">(0.7659–0.7898)</span></td><td class="num">0.1412 / 0.1546</td><td class="num">12.23 / 13.48</td></tr>
+          <tr><th scope="row" data-i18n="site.2"></th><td class="num">0.8204 <span class="ci">(0.8123–0.8279)</span></td><td class="num">0.7519 <span class="ci">(0.7410–0.7630)</span></td><td class="num">0.1520 / 0.2012</td><td class="num">11.23 / 13.71</td></tr>
+          <tr><th scope="row" data-i18n="site.3"></th><td class="num">0.8373 <span class="ci">(0.8310–0.8437)</span></td><td class="num">0.7428 <span class="ci">(0.7315–0.7534)</span></td><td class="num">0.1510 / 0.1590</td><td class="num">13.41 / 13.48</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine" data-i18n="about.perf.t2b_note"></p>
+    <p data-i18n="about.perf.p2"></p>
+  </section>
+
+  <section id="ranking" class="doc-sec" aria-labelledby="ranking-h">
+    <h2 id="ranking-h" data-i18n="about.rank.h"></h2>
+    <p data-i18n="about.rank.p1"></p>
+    <p data-i18n="about.rank.p2"></p>
+    <p data-i18n="about.rank.p3"></p>
+  </section>
+
+  <section id="exclusion" class="doc-sec" aria-labelledby="exclusion-h">
+    <h2 id="exclusion-h" data-i18n="about.excl.h"></h2>
+    <p data-i18n="about.excl.p1"></p>
+    <div class="table-wrap">
+      <table class="doc-table stack">
+        <caption data-i18n="about.excl.table_caption"></caption>
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="about.excl.col.site"></th>
+            <th scope="col" class="num" data-i18n="about.excl.col.overall"></th>
+            <th scope="col" class="num" data-i18n="about.excl.col.same"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.ibs_km"></th>
+            <th scope="col" class="num" data-i18n="about.perf.col.mae_km"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-i18n="site.1"></th><td class="num">0.814</td><td class="num">0.713</td><td class="num">0.163 / 0.183</td><td class="num">12.13 / 13.93</td></tr>
+          <tr><th scope="row" data-i18n="site.2"></th><td class="num">0.765</td><td class="num">0.652</td><td class="num">0.186 / 0.253</td><td class="num">10.74 / 13.09</td></tr>
+          <tr><th scope="row" data-i18n="site.3"></th><td class="num">0.827</td><td class="num">0.715</td><td class="num">0.169 / 0.165</td><td class="num">15.67 / 14.69</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-i18n="about.excl.p2"></p>
+    <p data-i18n="about.excl.p3"></p>
+  </section>
+
+  <section id="not-considered" class="doc-sec" aria-labelledby="not-considered-h">
+    <h2 id="not-considered-h" data-i18n="about.notc.h"></h2>
+    <p data-i18n="about.notc.p1"></p>
+    <div class="table-wrap">
+      <table class="doc-table text-table stack">
+        <caption data-i18n="about.notc.table_caption"></caption>
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="about.notc.col.domain"></th>
+            <th scope="col" data-i18n="about.notc.col.bclc"></th>
+            <th scope="col" data-i18n="about.notc.col.cpda"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-i18n="about.notc.r1.domain"></th><td data-i18n="about.notc.r1.bclc"></td><td data-i18n="about.notc.r1.cpda"></td></tr>
+          <tr><th scope="row" data-i18n="about.notc.r2.domain"></th><td data-i18n="about.notc.r2.bclc"></td><td data-i18n="about.notc.r2.cpda"></td></tr>
+          <tr><th scope="row" data-i18n="about.notc.r3.domain"></th><td data-i18n="about.notc.r3.bclc"></td><td data-i18n="about.notc.r3.cpda"></td></tr>
+          <tr><th scope="row" data-i18n="about.notc.r4.domain"></th><td data-i18n="about.notc.r4.bclc"></td><td data-i18n="about.notc.r4.cpda"></td></tr>
+          <tr><th scope="row" data-i18n="about.notc.r5.domain"></th><td data-i18n="about.notc.r5.bclc"></td><td data-i18n="about.notc.r5.cpda"></td></tr>
+          <tr><th scope="row" data-i18n="about.notc.r6.domain"></th><td data-i18n="about.notc.r6.bclc"></td><td data-i18n="about.notc.r6.cpda"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-i18n="about.notc.p2"></p>
+  </section>
+
+  <section id="limitations" class="doc-sec" aria-labelledby="limitations-h">
+    <h2 id="limitations-h" data-i18n="about.limits.h"></h2>
+    <p data-i18n="about.limits.intro"></p>
+    <ul class="quote-list">
+      <li><blockquote><p data-i18n="about.limit.1.text"></p></blockquote><p class="src" data-i18n="about.limit.1.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.2.text"></p></blockquote><p class="src" data-i18n="about.limit.2.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.3.text"></p></blockquote><p class="src" data-i18n="about.limit.3.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.4.text"></p></blockquote><p class="src" data-i18n="about.limit.4.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.5.text"></p></blockquote><p class="src" data-i18n="about.limit.5.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.6.text"></p></blockquote><p class="src" data-i18n="about.limit.6.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.7.text"></p></blockquote><p class="src" data-i18n="about.limit.7.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.8.text"></p></blockquote><p class="src" data-i18n="about.limit.8.src"></p></li>
+      <li><blockquote><p data-i18n="about.limit.9.text"></p></blockquote><p class="src" data-i18n="about.limit.9.src"></p></li>
+    </ul>
+  </section>
+
+  <section id="calculator-model" class="doc-sec" aria-labelledby="calculator-model-h">
+    <h2 id="calculator-model-h" data-i18n="about.calc.h"></h2>
+    <p data-i18n="about.calc.p1"></p>
+    <p data-i18n="about.calc.p2"></p>
+    <ul class="bullets">
+      <li data-i18n="about.calc.li1"></li>
+      <li data-i18n="about.calc.li2"></li>
+      <li data-i18n="about.calc.li3"></li>
+      <li data-i18n="about.calc.li4"></li>
+      <li data-i18n="about.calc.li5"></li>
+    </ul>
+  </section>
+
+  <section id="model-card-section" class="doc-sec" aria-labelledby="model-card-h">
+    <h2 id="model-card-h" data-i18n="about.card.h"></h2>
+    <p data-i18n="about.card.intro"></p>
+    <div id="model-card" class="model-card"></div>
+    <p class="fine" data-i18n="about.card.hash_note"></p>
+  </section>
+
+  <section id="privacy" class="doc-sec" aria-labelledby="privacy-h">
+    <h2 id="privacy-h" data-i18n="about.privacy.h"></h2>
+    <p data-i18n="about.privacy.p1"></p>
+    <p data-i18n="about.privacy.p2"></p>
+  </section>
+
+  <section id="status" class="doc-sec" aria-labelledby="status-h">
+    <h2 id="status-h" data-i18n="about.status.h"></h2>
+    <p data-i18n="about.status.p1"></p>
+    <p data-i18n="about.status.p2"></p>
+  </section>
+
+  <section id="contact" class="doc-sec" aria-labelledby="contact-h">
+    <h2 id="contact-h" data-i18n="about.contact.h"></h2>
+    <p data-i18n="about.contact.p1"></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p id="footer-model" class="footer-model"></p>
+    <p data-i18n="footer.privacy"></p>
+    <p id="footer-status" class="footer-status" role="status"></p>
+    <p><a href="index.html" data-i18n="footer.calc"></a></p>
+  </div>
+</footer>
+</body>
+</html>

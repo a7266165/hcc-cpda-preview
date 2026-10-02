@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title data-i18n="meta.title.calc">HCC-CPDA</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/site.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body data-page="calc">
+<a class="skip-link" href="#calc-form" data-i18n="nav.skip_form"></a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <p class="wordmark"><a href="index.html" data-i18n="brand.name"></a></p>
+      <p class="tagline" data-i18n="brand.subtitle"></p>
+    </div>
+    <nav class="header-nav" data-i18n-attr="aria-label:nav.label">
+      <div class="lang-toggle" role="group" data-i18n-attr="aria-label:lang.label">
+        <button type="button" data-lang="en" aria-pressed="true" lang="en" data-i18n="lang.en"></button>
+        <button type="button" data-lang="zh-TW" aria-pressed="false" lang="zh-TW" data-i18n="lang.zh"></button>
+      </div>
+      <a class="nav-link" href="about.html" data-i18n="nav.about"></a>
+    </nav>
+  </div>
+  <div class="banner" role="note"><p class="wrap" data-i18n="banner.text"></p></div>
+</header>
+
+<noscript><p class="wrap noscript">JavaScript is required for this calculator. 此計算器需要 JavaScript。</p></noscript>
+
+<main id="main" class="wrap">
+  <section class="intro" aria-labelledby="page-title">
+    <h1 id="page-title" data-i18n="calc.title"></h1>
+    <p class="lead" data-i18n="calc.lead"></p>
+  </section>
+
+  <form id="calc-form" class="calc-form" novalidate autocomplete="off" aria-labelledby="form-title">
+    <h2 id="form-title" class="visually-hidden" data-i18n="form.title"></h2>
+    <div class="form-grid">
+      <fieldset class="sec sec-patient" data-section="patient">
+        <legend class="sec-legend">
+          <span class="sec-num" aria-hidden="true">01</span>
+          <span class="sec-title" data-i18n="section.patient"></span>
+          <span class="sec-count" data-count-for="patient" aria-hidden="true"></span>
+          <span class="visually-hidden" data-count-sr-for="patient"></span>
+        </legend>
+        <div class="fields" data-fields-for="patient"></div>
+      </fieldset>
+
+      <fieldset class="sec sec-tumour" data-section="tumour">
+        <legend class="sec-legend">
+          <span class="sec-num" aria-hidden="true">02</span>
+          <span class="sec-title" data-i18n="section.tumour"></span>
+          <span class="sec-count" data-count-for="tumour" aria-hidden="true"></span>
+          <span class="visually-hidden" data-count-sr-for="tumour"></span>
+        </legend>
+        <div class="fields" data-fields-for="tumour"></div>
+      </fieldset>
+
+      <fieldset class="sec sec-liver" data-section="liver">
+        <legend class="sec-legend">
+          <span class="sec-num" aria-hidden="true">03</span>
+          <span class="sec-title" data-i18n="section.liver"></span>
+          <span class="sec-count" data-count-for="liver" aria-hidden="true"></span>
+          <span class="visually-hidden" data-count-sr-for="liver"></span>
+        </legend>
+        <div class="fields" data-fields-for="liver"></div>
+      </fieldset>
+
+      <fieldset class="sec sec-stage" data-section="stage_site">
+        <legend class="sec-legend">
+          <span class="sec-num" aria-hidden="true">04</span>
+          <span class="sec-title" data-i18n="section.stage_site"></span>
+          <span class="sec-count" data-count-for="stage_site" aria-hidden="true"></span>
+          <span class="visually-hidden" data-count-sr-for="stage_site"></span>
+        </legend>
+        <div class="fields" data-fields-for="stage_site"></div>
+      </fieldset>
+    </div>
+
+    <div class="form-notes">
+      <p class="not-used" data-i18n="form.not_used"></p>
+      <p class="units-note" data-i18n="form.units_note"></p>
+    </div>
+
+    <div class="actions">
+      <div class="completion">
+        <label for="completion-bar" id="completion-label"></label>
+        <progress id="completion-bar" max="17" value="0"></progress>
+      </div>
+      <div class="buttons">
+        <button type="submit" id="btn-project" class="btn btn-primary is-disabled" aria-disabled="true" aria-describedby="project-reason" data-i18n="btn.project"></button>
+        <button type="button" id="btn-example" class="btn btn-secondary" data-i18n="btn.example"></button>
+        <button type="button" id="btn-undo" class="btn btn-ghost" hidden data-i18n="btn.undo"></button>
+        <button type="button" id="btn-clear" class="btn btn-ghost" data-i18n="btn.clear"></button>
+      </div>
+      <p id="project-reason" class="reason"></p>
+      <p id="form-notice" class="notice" role="status"></p>
+      <p id="form-live" class="visually-hidden" role="status"></p>
+    </div>
+  </form>
+
+  <section id="results" class="results" aria-labelledby="results-title">
+    <div class="results-head">
+      <h2 id="results-title" tabindex="-1" data-i18n="results.title"></h2>
+      <p id="results-context" class="context"></p>
+      <p id="results-live" class="visually-hidden" role="status"></p>
+    </div>
+    <div id="results-body" class="results-body"></div>
+
+    <section class="caveats" aria-labelledby="caveats-title">
+      <h3 id="caveats-title" data-i18n="caveats.title"></h3>
+      <p class="caveats-intro" data-i18n="caveats.intro"></p>
+      <ul class="quote-list">
+        <li><blockquote><p data-i18n="caveat.1.text"></p></blockquote><p class="src" data-i18n="caveat.1.src"></p></li>
+        <li><blockquote><p data-i18n="caveat.2.text"></p></blockquote><p class="src" data-i18n="caveat.2.src"></p></li>
+        <li><blockquote><p data-i18n="caveat.3.text"></p></blockquote><p class="src" data-i18n="caveat.3.src"></p></li>
+        <li><blockquote><p data-i18n="caveat.4.text"></p></blockquote><p class="src" data-i18n="caveat.4.src"></p></li>
+        <li><blockquote><p data-i18n="caveat.5.text"></p></blockquote><p class="src" data-i18n="caveat.5.src"></p></li>
+        <li><blockquote><p data-i18n="caveat.6.text"></p></blockquote><p class="src" data-i18n="caveat.6.src"></p></li>
+        <li><blockquote><p data-i18n="caveat.7.text"></p></blockquote><p class="src" data-i18n="caveat.7.src"></p></li>
+        <li><blockquote><p data-i18n="caveat.8.text"></p></blockquote><p class="src" data-i18n="caveat.8.src"></p></li>
+      </ul>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p id="footer-model" class="footer-model"></p>
+    <p data-i18n="footer.privacy"></p>
+    <p id="footer-status" class="footer-status" role="status"></p>
+    <p><a href="about.html" data-i18n="footer.about"></a></p>
+  </div>
+</footer>
+</body>
+</html>

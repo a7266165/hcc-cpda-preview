@@ -1,0 +1,204 @@
+{
+  "format": "hcc-cpda-web-manifest/1",
+  "model_version": "0.1.0-mvp",
+  "created_utc": "2026-10-01T12:38:48Z",
+  "columns": [
+    "sex",
+    "age",
+    "BMI",
+    "HBV",
+    "HCV",
+    "maximal_tumor_size",
+    "tumor_number",
+    "lymphonodules",
+    "metastatsis",
+    "cirrhosis",
+    "childPugh_class",
+    "total_bilirubin",
+    "INR",
+    "AFP",
+    "creatine",
+    "stage_code",
+    "hosp_1",
+    "hosp_2",
+    "hosp_3",
+    "trt_LT",
+    "trt_SR",
+    "trt_RFA",
+    "trt_TACE",
+    "trt_TT",
+    "trt_HAIC",
+    "trt_RT",
+    "trt_BSC"
+  ],
+  "predictors": [
+    "sex",
+    "age",
+    "BMI",
+    "HBV",
+    "HCV",
+    "maximal_tumor_size",
+    "tumor_number",
+    "lymphonodules",
+    "metastatsis",
+    "cirrhosis",
+    "childPugh_class",
+    "total_bilirubin",
+    "INR",
+    "AFP",
+    "creatine"
+  ],
+  "treatments": [
+    "LT",
+    "SR",
+    "RFA",
+    "TACE",
+    "TT",
+    "HAIC",
+    "RT",
+    "BSC"
+  ],
+  "hospitals": [
+    1,
+    2,
+    3
+  ],
+  "stage_codes": {
+    "0": 0,
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 4
+  },
+  "horizons_months": {
+    "0": 84,
+    "A": 84,
+    "B": 36,
+    "C": 24,
+    "D": 12
+  },
+  "aft": {
+    "objective": "survival:aft",
+    "distribution": "normal",
+    "sigma": 1.0,
+    "base_score": 0.5
+  },
+  "n_models": 10,
+  "boosters": [
+    {
+      "file": "aft_m0.json",
+      "sha256": "610e4d4000da4957c5bc70416013bf1fe84113820be40d4859a3fddb341b967e",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m1.json",
+      "sha256": "9a8e7817fd00836fd48e993c2a5f0a990ea5bcb9eb966a307c5909509f1c87a3",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m2.json",
+      "sha256": "145a64d05e0dba0ef6663514e1fda7081c41eb17b308eed4bc8a41a8937ac7b5",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m3.json",
+      "sha256": "94f9f9b27b1184137d326e6a1d9a0fca594ed2da4ab475f6f06ac056fc9838fe",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m4.json",
+      "sha256": "c7afa72a061e7db3a063fdc5242fda7849a03f9c9d4e330acef5d82755755e04",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m5.json",
+      "sha256": "8d239da9744cd5382fec736bdf8dc92deed48b98f398033af70ff2730c11929c",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m6.json",
+      "sha256": "0e78da2b48b47a22a5f54be2e44a78b2b6d1d21a2be96c4f322ce017c3e8dc20",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m7.json",
+      "sha256": "67b7fa2524e3f62e9db65df635bf4e2f24f144d16beb331b33f1bf6c84279c1f",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m8.json",
+      "sha256": "cb939d786bcf8aba842c1f0ae86564b7eab0d32ef4f0200e61d78203fd066285",
+      "n_trees": 412
+    },
+    {
+      "file": "aft_m9.json",
+      "sha256": "945cc0a6c091e18ff1e8d20956d89b17432084fd72ba1c24d8a5c96bb38a376e",
+      "n_trees": 412
+    }
+  ],
+  "training": {
+    "cohort_n": 13456,
+    "deaths": 8296,
+    "deploy_seed": 9260914,
+    "seed_rule": "imputation seed = deploy_seed + 37*m; AFT tree seed = imputation seed + 1",
+    "imputation_seeds": [
+      9260914,
+      9260951,
+      9260988,
+      9261025,
+      9261062,
+      9261099,
+      9261136,
+      9261173,
+      9261210,
+      9261247
+    ],
+    "aft_seeds": [
+      9260915,
+      9260952,
+      9260989,
+      9261026,
+      9261063,
+      9261100,
+      9261137,
+      9261174,
+      9261211,
+      9261248
+    ],
+    "device": "cpu",
+    "nthread": 8,
+    "num_boost_round": 412,
+    "params": {
+      "device": "cpu",
+      "objective": "survival:aft",
+      "eval_metric": "aft-nloglik",
+      "aft_loss_distribution": "normal",
+      "aft_loss_distribution_scale": 1.0,
+      "tree_method": "hist",
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "min_child_weight": 50.0,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "reg_lambda": 50.0,
+      "reg_alpha": 2.0,
+      "verbosity": 0,
+      "nthread": 8
+    },
+    "imputation": "10 stochastic IterativeImputer completions (cpda.imputation.FoldImputer); imputers are not exported"
+  },
+  "inference": {
+    "inputs": "all 15 predictors, BCLC stage and site required; no imputation at inference",
+    "imputer_identity_on_complete_rows_verified": true
+  },
+  "software": {
+    "python": "3.12.14",
+    "xgboost": "3.4.1",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "2.3.3",
+    "cpda_git_head": "ebd0704ad1acd5b96d35e8f5cdead7b3b44d67f1",
+    "cpda_git_dirty": false
+  }
+}
